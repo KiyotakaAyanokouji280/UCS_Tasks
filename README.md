@@ -1,4 +1,4 @@
-#Just HTML and CSS
+# Just HTML and CSS
 Contains website basic frontend using only html and css. 
 
 # Smart Contracts for UCS task
