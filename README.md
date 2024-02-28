@@ -1,3 +1,6 @@
+#Just HTML and CSS
+Contains website basic frontend using only html and css. 
+
 # Smart Contracts for UCS task
 
 ## Task 1
@@ -17,4 +20,5 @@
 3. Get user data. <br>
 3. Give access to user. <br>
 4. Revoke access from a user. <br>
+
 
