@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src = './index.js'></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universal Credit System</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <nav class = "navbar">
+    <ul class = "navitems">
+
+      <li class = "navitem">
+        <a href = "#logoandhome" class = "nav-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>          <span class = "link-text">Home</span>
+        </a>  
+      </li>
+
+      <li class = "navitem">
+        <a href = "#createdid" class = "nav-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>          
+          <span class = "link-text">CreateDID</span>
+        </a>  
+      </li>
+      
+      <li class = "navitem">  
+        <a href = "#viewdid" class = "nav-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg>
+          <span class = "link-text">ViewDID</span>
+        </a>
+      </li>
+
+      <li class = "navitem">
+        <a href = "#issuedegreecertificate" class = "nav-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 0h64c17.7 0 32 14.3 32 32V96c0 17.7-14.3 32-32 32H256c-17.7 0-32-14.3-32-32V32c0-17.7 14.3-32 32-32zM64 64H192v48c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48V64H512c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64zM176 437.3c0 5.9 4.8 10.7 10.7 10.7H389.3c5.9 0 10.7-4.8 10.7-10.7c0-29.5-23.9-53.3-53.3-53.3H229.3c-29.5 0-53.3 23.9-53.3 53.3zM288 352a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg>
+          <span class="link-text">Issue Degree Certificate</span>
+        </a> 
+      </li> 
+
+      <li class = "navitem">
+        <a href = "#verifyvc" class = "nav-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+          <span class="link-text">VerifyVC</span>
+        </a> 
+      </li> 
+    </ul>
+  </nav>
+
+  <main>
+    <div class="container mt-4">
+      <section class = "logos" id="logoandhome">
+        <div class = "logo-left">
+          <img src="./clublogo.jpg" alt="Webops And Blockchain Club IITM">
+        </div>
+        <div></div>
+        <div class = "logo-right">
+          <img src="./cfi logo.png" alt="CFI IITM">
+        </div>
+      </section>
+
+      <section class = "head"> 
+        <div class = "column-left"><h1 class="text-center mb-4"><b>Universal Credit System</b></h1></div> 
+        <div class = "column-right"><p>Maintaining credits across multiple course platforms has become a strenuous process since different institutions follow different systems.
+          A universal system for being able to accredit any course from any platform needed to be built.
+          The requirement is to ensure easily verifiable and tamper-proof credits to all students through BlockChain technology.<br><br><hr><br> To overcome this challange, our team has been working on this project and have successfully come up with the second version of this working decentralised appliction.
+          </p></div>
+      </section>
+
+      <section class="CreateDID" id="createdid">
+        <h2>Create your DID</h2>
+        <div class="form-group">
+          <label for="rollnumber">RollNo:</label>
+          <input type="text" class="form-control" id="rollnumber" placeholder="Enter your RollNo">
+        </div>
+        <button class="btn btn-success" id="createDIDButton" onclick="createObject()">Create</button>
+        <div id="messageaftercreatedid"></div>
+      </section>
+
+      <section class="ViewDID" id="viewdid">
+        <h2>View DID</h2>
+        <div class="form-group">
+          <label for="viewDID">RollNumber:</label>
+          <input type="text" class="form-control" id="viewDID" placeholder="Enter RollNumber">
+        </div>
+        <button class="btn btn-primary" id="viewDIDButton" onclick = "viewObjectData()">View DID</button>
+        <div id="messageafterviewdid"></div>
+      </section>
+
+      <section class="IssueCertificate" id="issuedegreecertificate">
+        <h2><b>Only for Authorised Authorities</b></h2>
+        <h2>Issue Degree Certificate</h2>
+        <div class="form-group">
+          <label for="recipientDID">Recipient DID:</label>
+          <input type="text" class="form-control" id="recipientDID">
+        </div>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name">
+        </div>
+        <div class="form-group">
+          <label for="department">Department:</label>
+          <input type="text" class="form-control" id="department">
+        </div>
+        <div class="form-group">
+          <label for="yog">Year of Graduation:</label>
+          <input type="number" class="form-control" id="yog">
+        </div>
+        <div class="form-group">
+          <label for="privateKey">Private Key:</label>
+          <input type="password" class="form-control" id="privateKey">
+        </div>
+        <button class="btn btn-info" id="createCredintialButton" onclick="issueCertificate(); saveToJson(); printVC(  )">Create Credential</button>
+        <div id="result" class="mt-3"></div>
+      </section>
+
+      <section class="VerifyVC" id="verifyvc">
+        <h2>Verify VC</h2>
+        <div class="form-group">
+          <label for="viewDIDVerify">RollNumber:</label>
+          <textarea class="form-control" id="viewDIDVerify" placeholder="Enter Credentials in JSON" style="width:30rem; height:30rem;" ></textarea>
+        </div>
+        <button class="btn btn-warning" id="viewDIDButtonVerify" onclick="checkJSON()">Verify VC</button>
+        <div id = 'verifiedOrNot'></div>
+      </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script src="./app.js" type="module"></script> -->
+    <script>
+      //store the dids
+      var roll_did_data = {};
+      var did_credential_data = {};
+      //create the did with mapping to roll number
+      function createObject () {
+        const userInput = document.getElementById('rollnumber').value;
+        //creating did
+        if (roll_did_data[userInput] !== undefined) {
+          alert("DID for this roll number already exists!");
+          return;
+        }
+        var did_end = '';
+        for (let index = 0; index < userInput.length; index++) {
+          did_end += userInput[index];
+          did_end += userInput[Math.floor(index/2)];
+          
+        }
+        const userValue = ('did:hf:0011'+did_end);
+        //mapping did to roll number
+        roll_did_data[userInput] = userValue;
+        document.getElementById('messageaftercreatedid').innerHTML = "<br><b>DID generated is:<br>" + roll_did_data[userInput] + "<br><br>Private Key generated is:<br>1e99423a4ed27608a15a2616a2b0e9e52ced330ac530edcc32c8ffc6a526aedd<br></b>";
+        document.getElementById('messageaftercreatedid').style.color = 'black';
+      }
+
+      // function to view the did
+      function viewObjectData () {
+        rollNumberKey = document.getElementById('viewDID').value;
+        if (roll_did_data[rollNumberKey] === undefined) {
+          alert("There is no DID associated with this roll number!");
+          return;
+        }
+        document.getElementById('messageafterviewdid').innerHTML = `<br>Your DID is given below. Please note it down. <br><b> {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/jws-2020/v1"
+          ],
+          "id": ${roll_did_data[rollNumberKey]},
+          "verificationMethod": [
+            {
+              "id": ${roll_did_data[rollNumberKey]},
+              "type": "JsonWebKey2020",
+              "controller": ${roll_did_data[rollNumberKey]},
+              "publicKeyJwk": {
+                "kty": "EC",
+                "crv": "secp256k1",
+                "x": "7afa3a377b5808e4223dd62542a6e7e46ab0be95873464520193c1857ec2bb8f",
+                "y": "58b050b73f31f1b8b98c0b04513257433bdad2a51188642d8b0e515fbfb3125f"
+              }
+            }
+          ],
+          "authentication": [
+            ${roll_did_data[rollNumberKey]}
+          ],
+          "assertionMethod": [
+            ${roll_did_data[rollNumberKey]}
+          ]
+        }`
+        
+        //document.getElementById('messageafterviewdid').innerHTML = "<br>Your DID is given below. Please note it down. <br><b>" + roll_did_data[rollNumberKey] + "</b>";
+        document.getElementById('messageafterviewdid').style.color = 'black';
+      }
+
+      //function to issue degree certificate
+      function issueCertificate () {
+        const inputDid = document.getElementById('recipientDID').value;
+        const name = document.getElementById('name').value;
+        const department = document.getElementById('department').value;
+        const yearOfGrad = document.getElementById('yog').value;
+        const privateKey = document.getElementById('privateKey').value;
+        if (Object.values(roll_did_data).includes(inputDid)) {
+
+          did_credential_data[inputDid] =  {
+            verified: true,
+            payload: {
+              vc: { '@context': [Array], type: [Array], credentialSubject: [Object] },
+              sub: inputDid,
+              nbf: 1562950282,
+              iss: inputDid
+            },
+            didResolutionResult: {
+              didDocument: {
+                '@context': [Array],
+                id: inputDid,
+                verificationMethod: [Array],
+                authentication: [Array],
+                assertionMethod: [Array]
+              },
+              didDocumentMetadata: {},
+              didResolutionMetadata: { contentType: 'application/did+ld+json' }
+            },
+            issuer: inputDid,
+            signer: {
+              id: inputDid,
+              type: 'JsonWebKey2020',
+              controller: inputDid,
+              publicKeyJwk: {
+                kty: 'EC',
+                crv: 'secp256k1',
+                x: 'DtZGHvyuNAQsx14a95qETt93DCCmj4D1+cZI/tBq5/Q=',
+                y: 'eJiyCw5tXteQKYpaAqz3BdUTRQWqnEqrYPjTxMNehJw='
+              }
+            },
+            jwt: 'eyJhbGciOiJFUzI1NksiLCJ0eXAiOiJKV1QifQ.eyJ2YyI6eyJAY29udGV4dCI6WyJodHRwczovL3d3dy53My5vcmcvMjAxOC9jcmVkZW50aWFscy92MSJdLCJ0eXBlIjpbIlZlcmlmaWFibGVDcmVkZW50aWFsIl0sImNyZWRlbnRpYWxTdWJqZWN0Ijp7ImRlZ3JlZSI6eyJ0eXBlIjoiQmFjaGVsb3JEZWdyZWUiLCJuYW1lIjoiQmFjY2FsYXVyw6lhdCBlbiBtdXNpcXVlcyBudW3DqXJpcXVlcyJ9fX0sInN1YiI6ImRpZDp3ZWI6c2tvdW5pcy5naXRodWIuaW8iLCJuYmYiOjE1NjI5NTAyODIsImlzcyI6ImRpZDp3ZWI6c2tvdW5pcy5naXRodWIuaW8ifQ.HdDBT9mpvCnV-vCLEygF8s1X9cGoT-nZn0ac87HiOo0WLUOPy7l5ezPTKEjf7UT7B3GokPjWAgXAEoB2DDkrVw',
+            policies: { nbf: undefined, exp: undefined, iat: undefined },
+            verifiableCredential: {
+              credentialSubject: { degree: [Object], id: inputDid },
+              issuer: { id: inputDid },
+              type: [ 'VerifiableCredential' ],
+              '@context': [ 'https://www.w3.org/2018/credentials/v1' ],
+              issuanceDate: '2019-07-12T16:51:22.000Z',
+              proof: {
+                type: 'JwtProof2020',
+                jwt: 'eyJhbGciOiJFUzI1NksiLCJ0eXAiOiJKV1QifQ.eyJ2YyI6eyJAY29udGV4dCI6WyJodHRwczovL3d3dy53My5vcmcvMjAxOC9jcmVkZW50aWFscy92MSJdLCJ0eXBlIjpbIlZlcmlmaWFibGVDcmVkZW50aWFsIl0sImNyZWRlbnRpYWxTdWJqZWN0Ijp7ImRlZ3JlZSI6eyJ0eXBlIjoiQmFjaGVsb3JEZWdyZWUiLCJuYW1lIjoiQmFjY2FsYXVyw6lhdCBlbiBtdXNpcXVlcyBudW3DqXJpcXVlcyJ9fX0sInN1YiI6ImRpZDp3ZWI6c2tvdW5pcy5naXRodWIuaW8iLCJuYmYiOjE1NjI5NTAyODIsImlzcyI6ImRpZDp3ZWI6c2tvdW5pcy5naXRodWIuaW8ifQ.HdDBT9mpvCnV-vCLEygF8s1X9cGoT-nZn0ac87HiOo0WLUOPy7l5ezPTKEjf7UT7B3GokPjWAgXAEoB2DDkrVw'
+              }
+            }
+          }
+          // did_credential_data[inputDid] = {name: name, department: department, yearOfGrad: yearOfGrad, privateKey: privateKey};
+          alert('Credentials mapped successfully!');
+          console.log(did_credential_data);
+        } else {
+          alert(`${inputDid} does not exist in database!`);
+        }
+        
+      }
+
+      async function saveToJson() {
+        const inputDid = document.getElementById('recipientDID').value;
+        if (!Object.values(roll_did_data).includes(inputDid)) {
+          alert("Error. Input DID does not exist!");
+          return;
+        }
+        
+        const verifiableCredential = did_credential_data[inputDid];
+
+        const blob = new Blob([JSON.stringify( verifiableCredential )], { type: 'application/json' });
+        const handle = await window.showSaveFilePicker({
+            suggestedName: 'credentials.json',
+            types: [{
+                description: 'JSON Files',
+                accept: { 'application/json': ['.json'] },
+            }],
+        });
+
+        const writable = await handle.createWritable();
+        await writable.write(blob);
+        await writable.close();
+
+        console.log('Data saved to JSON file.');
+      }
+
+      function printVC () {
+        const inputDid = document.getElementById('recipientDID').value;
+        document.getElementById('result').innerHTML = JSON.stringify(did_credential_data[inputDid]);
+      }
+
+      function checkJSON() {
+        jsonRecieved = document.getElementById('viewDIDVerify').value;
+        var isCorrect = false;
+        
+        for (const key in did_credential_data) {
+          if (JSON.stringify(did_credential_data[key]) === jsonRecieved) {
+            isCorrect = true;
+          }
+        }
+
+        if (isCorrect) {
+          document.getElementById('verifiedOrNot').innerHTML = "Verified Successfully!";
+          document.getElementById('verifiedOrNot').style.color = 'green';
+        }
+        else {
+          var addition = '<div style="color: red">Data does not match!!</div>';
+          document.getElementById('verifiedOrNot').innerHTML = "Not Verified!";
+          document.getElementById('verifiedOrNot').style.color = 'red';
+        }
+      }
+    </script>
+  </main>
+</body>
+</html>
